@@ -49,6 +49,7 @@ pipeline {
                 sh "docker login -u $USERNAME -p $PASSWORD 192.168.100.50:8083"
                 sh "docker tag microservicio:latest 192.168.100.50:8083/repository/docker-private/microservicio:latest"
                 sh "docker push 192.168.100.50:8083/repository/docker-private/microservicio:latest"
+                }
             }
         }
     }
